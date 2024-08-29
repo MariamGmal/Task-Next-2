@@ -1,0 +1,16 @@
+.cont{
+position: relative;
+background-image: url(../../../public/team2.avif);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+padding: 0px;
+margin: 0px;
+}
+
+.lorem{
+background-color: rgb(240, 179, 211);
+text-align: center;
+justify-content: center;
+align-items: center;
+}

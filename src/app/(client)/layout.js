@@ -1,25 +1,12 @@
-import { Inter } from "next/font/google";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css";
-import Header from "../components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Next Task 1",
-  description: "First Task",
-};
-
-export default function RootLayout({ children }) {
+const layout = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="">
         <div className="">
           <main>
-            <Header />
-
-            {/* <div className="container-fluid ">
+            <div className="container-fluid ">
               <div className="row flex-nowrap">
                 <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
                   <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -33,22 +20,22 @@ export default function RootLayout({ children }) {
                       id="menu">
                       <li className="nav-item">
                         <a
-                          href="/newPage"
+                          href="/aboutus"
                           className="nav-link align-middle px-0">
                           <i className="fs-4 bi-house"></i>{" "}
                           <span className="ms-1 d-none d-sm-inline">
-                            News 1
+                            About Us
                           </span>
                         </a>
                       </li>
                       <li>
                         <a
-                          href="/newPage2"
+                          href="/contactus"
                           data-bs-toggle="collapse"
                           className="nav-link px-0 align-middle">
                           <i className="fs-4 bi-speedometer2"></i>{" "}
                           <span className="ms-1 d-none d-sm-inline">
-                            News 2
+                            Contact Us
                           </span>
                         </a>
                       </li>
@@ -70,13 +57,13 @@ export default function RootLayout({ children }) {
                   <div className="flex-1 main ">{children}</div>
                 </div>
               </div>
-            </div> */}
-            <div className=" ">{children}</div>
-
-            <Footer />
+            </div>
+            ;
           </main>
         </div>
       </body>
     </html>
   );
-}
+};
+
+export default layout;
